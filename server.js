@@ -11,6 +11,8 @@ const express = require('express');
 const app = express();
 app.use(requireHTTPS);
 
+app.use(require('prerender-node').set('prerenderToken', 'OUlHT7DgOvU7nhdYglHS'));
+
 // Serve only the static files form the dist directory
 app.use(express.static('./dist/port02'));
 
